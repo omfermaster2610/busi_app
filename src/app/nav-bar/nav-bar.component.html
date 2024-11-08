@@ -1,15 +1,39 @@
-<header class="grid grid-cols-2 items-center p-5 mb-5 fixed w-screen z-10 ">
+<header class="grid grid-cols-2 items-center p-5 mb-5 fixed w-screen z-10  max-sm:bg-yellow-500 max-sm:grid-cols-1">
     <div class="flex flex-col text-center">
         <h1 class="text-5xl font-bold">{{title}}</h1>
         <h2 class="text-2xl">{{eslogan}}</h2>
+
+        <div class="mr-12 sm:hidden max-sm:align-middle max-sm:justify-center" id="menu_contenido_movil">
+            <div id="menu_contenido">
+                <ul class="flex gap-10 max-sm:flex-col md:flex-row">
+                    <li><a href="#">Inicio</a></li> 
+                    <li><a href="#">Sobre nosotros</a></li>
+                    <li><a href="#">Contáctanos</a></li>
+                    <li><a href="#">Descargar</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="menu">
+            <label class="flex flex-col gap-2 w-8 cursor-pointer z-1" id="menu">
+                <input class="peer hidden" type="checkbox" />
+                <div class="rounded-2xl h-[3px] w-1/2 bg-black duration-500 peer-checked:rotate-[225deg] origin-right peer-checked:-translate-x-[12px] peer-checked:-translate-y-[1px]"
+                ></div>
+                <div class="rounded-2xl h-[3px] w-full bg-black duration-500 peer-checked:-rotate-45"
+                ></div>
+                <div class="rounded-2xl h-[3px] w-1/2 bg-black duration-500 place-self-end peer-checked:rotate-[225deg] origin-left peer-checked:translate-x-[12px] peer-checked:translate-y-[1px]"
+                ></div>
+          </label>
+        </div>
+
     </div>
 
-    <div class="flex justify-end mr-12">
-        <ul class="flex gap-10">
+    <div class="flex justify-end mr-12 max-sm:hidden">
+        <ul class="flex gap-10 max-sm:flex-col md:flex-row translate-y-0">
             <li><a href="#">Inicio</a></li> 
             <li><a href="#">Sobre nosotros</a></li>
             <li><a href="#">Contáctanos</a></li>
             <li><a href="#">Descargar</a></li>
         </ul>
     </div>
+
 </header>
