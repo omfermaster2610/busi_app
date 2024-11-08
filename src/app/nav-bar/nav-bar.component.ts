@@ -12,4 +12,16 @@ export class NavBarComponent {
   title= 'BUSI';
   eslogan = "VIAJES QUE CONECTAN";
 
+    cambiarHeader(){
+    window.addEventListener('scroll', function(){
+      var header = document.querySelector("header");
+      header?.classList.toggle("text-yellow-500", window.scrollY==0);
+      header?.classList.toggle("bg-yellow-500", window.scrollY>0);
+      header?.classList.toggle("text-white", window.scrollY>0);
+    })
+  }
+  
+  ngOnInit(){
+    this.cambiarHeader();
+  }
 }
